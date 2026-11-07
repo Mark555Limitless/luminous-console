@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src https://api.github.com; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>ルミナス 予備の操作</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <p id="frame-message" hidden>枠の中では使えません</p>
+  <main id="app" hidden>
+    <h1>ルミナス 予備の操作</h1>
+    <section>
+      <h2>token</h2>
+      <label for="token">GitHub token</label>
+      <input id="token" type="password" autocomplete="new-password" spellcheck="false">
+      <p>fine-grained token・対象は luminous だけ・権限は Contents 読み取り・Issues 読み書き・期限は短く・ブラウザに保存しない</p>
+      <button id="save-token" type="button">token を保存</button>
+      <button id="clear-token" type="button">token を消す</button>
+    </section>
+    <p id="message" role="status" aria-live="polite"></p>
+    <section>
+      <h2>今の状態</h2>
+      <button id="refresh-status" type="button">状態を見る</button>
+      <h3>次にすること</h3><pre id="status"></pre>
+      <h3>引き継ぎ</h3><pre id="handover"></pre>
+    </section>
+    <section>
+      <h2>指示を残す</h2>
+      <label for="instruction">文</label>
+      <textarea id="instruction" rows="5"></textarea>
+      <button id="send" type="button">送る</button>
+    </section>
+    <section>
+      <h2>やりとり</h2>
+      <button id="refresh-issues" type="button">やりとりを見る</button>
+      <div id="issues"></div>
+    </section>
+    <section>
+      <h2>止める合図</h2>
+      <p>この Mac の停止スイッチそのものは動かさない。次に動く司令塔が読んで止める</p>
+      <button id="halt" type="button">ルミナスを止めてほしい</button>
+    </section>
+  </main>
+</body>
+</html>

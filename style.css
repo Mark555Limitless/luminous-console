@@ -1,0 +1,12 @@
+:root { font-family: system-ui, sans-serif; color: #1e293b; background: #f1f5f9; line-height: 1.6; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 52rem; margin: auto; padding: 1rem; }
+section, .issue { background: white; border: 1px solid #cbd5e1; border-radius: .5rem; padding: 1rem; margin: 1rem 0; }
+h1 { font-size: 1.5rem; }
+h2 { font-size: 1.2rem; margin-top: 0; }
+label { display: block; }
+input, textarea { width: 100%; font: inherit; padding: .5rem; border: 1px solid #64748b; border-radius: .25rem; }
+button { font: inherit; padding: .5rem .8rem; margin: .35rem .35rem .35rem 0; cursor: pointer; }
+pre, .remote-text { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; }
+#message { font-weight: bold; overflow-wrap: anywhere; }
